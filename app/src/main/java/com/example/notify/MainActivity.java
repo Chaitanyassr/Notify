@@ -23,16 +23,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NotificationCompat.Builder builder=new android.support.v4.app.NotificationCompact.Builder(context:this);
+        NotificationCompat.Builder builder=new android.support.v4.app.NotificationCompat.Builder(context:this);
         builder.setSmallIcon(R.drawable.ic_launcher_background);
                 builder.setContentTitle("whatsappmessage");
         builder.setContentText("message is hi how r u");
 
-        Intent intent=new Intent(packageContext:this, ResultActivity.class);
-        PendingIntent pendingIntent = pendingIntent.getActivity(context:this,requestCode:0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent intent=new Intent(packageContext: this, ResultActivity.class);
+        PendingIntent pendingIntent = pendingIntent.getActivity(Context:this,requestCode:0,intent,pendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(pendingIntent);
 
-        NotificationManager manager=(NotificationManager) getSystemService(NOTIFICATION_SERVICE ) manager.notify( id:1, builder.build());
+        NotificationManager manager=(NotificationManager) getSystemService(NOTIFICATION_SERVICE );
+        manager.notify(id:1,builder.build());
 
 
 
